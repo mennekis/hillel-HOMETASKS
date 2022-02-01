@@ -94,20 +94,6 @@ let timerId = setInterval(function () {
   ++currentSlide;
 }, 5000);
 
-function autoplay(params) {
-  setInterval(function () {
-    if (currentSlide === imgs.length - 1) {
-      clearInterval(timerId);
-    }
-    isLastSlide();
-    isFirstSlide();
-    activeDot();
-    slider(currentSlide);
-
-    ++currentSlide;
-  }, 5000);
-}
-
 window.onload = timerId;
 
 dots.addEventListener("click", function (e) {
@@ -119,9 +105,9 @@ dots.addEventListener("click", function (e) {
     isLastSlide();
     isFirstSlide();
     activeDot();
-    setInterval(function () {
+    let timerID2 = setInterval(function () {
       if (currentSlide === imgs.length - 1) {
-        clearInterval(timerId);
+        clearInterval(timerID2);
       }
       if (currentSlide !== imgs.length - 1) {
         ++currentSlide;
