@@ -11,6 +11,20 @@ const btnNext = document.querySelector(".next");
 const dots = document.querySelector(".dots");
 let currentSlide = 0;
 
+let timerID2 = setInterval(function () {
+  if (currentSlide === imgs.length - 1) {
+    clearInterval(timerID2);
+  }
+  if (currentSlide !== imgs.length - 1) {
+    ++currentSlide;
+  }
+  isLastSlide();
+  isFirstSlide();
+  activeDot();
+
+  slider(currentSlide);
+}, 5000);
+
 function addImagesToSlider() {
   imgs.forEach((img, i) => {
     let tagImg = document.createElement("img");
@@ -71,12 +85,14 @@ btnNext.addEventListener("click", function () {
   isLastSlide();
   isFirstSlide();
   activeDot();
+  timerID2;
 });
 btnPrev.addEventListener("click", function () {
   slider(--currentSlide);
   isLastSlide();
   isFirstSlide();
   activeDot();
+  timerID2;
 });
 
 let timerId = setInterval(function () {
@@ -105,18 +121,6 @@ dots.addEventListener("click", function (e) {
     isLastSlide();
     isFirstSlide();
     activeDot();
-    let timerID2 = setInterval(function () {
-      if (currentSlide === imgs.length - 1) {
-        clearInterval(timerID2);
-      }
-      if (currentSlide !== imgs.length - 1) {
-        ++currentSlide;
-      }
-      isLastSlide();
-      isFirstSlide();
-      activeDot();
-
-      slider(currentSlide);
-    }, 5000);
+    timerID2;
   }
 });
