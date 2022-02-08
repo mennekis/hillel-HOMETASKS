@@ -1,7 +1,7 @@
 $(document).ready(function() {
     $("#light-slider").lightSlider({
         item: 1,
-        autoWidth: true,
+        autoWidth: false,
         slideMove: 1, // slidemove will be 1 if loop is true
         slideMargin: 0,
 
@@ -40,11 +40,11 @@ $(document).ready(function() {
 
         responsive : [],
 
-        onBeforeStart: function (el) {},
-        onSliderLoad: function (el) {},
-        onBeforeSlide: function (el) {},
-        onAfterSlide: function (el) {},
-        onBeforeNextSlide: function (el) {},
-        onBeforePrevSlide: function (el) {}
+        // onBeforeStart: function (el) {},
+        // onSliderLoad: function (el) {},
+        // onBeforeSlide: function (el) {},
+        // onAfterSlide: function (el) {},
+        // onBeforeNextSlide: function (el) {},
+        // onBeforePrevSlide: function (el) {}
     });
 });
