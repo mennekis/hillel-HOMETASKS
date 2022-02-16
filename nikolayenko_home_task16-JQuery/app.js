@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $("#light-slider").lightSlider({
+    $("#imageGallery").lightSlider({
         item: 1,
         autoWidth: false,
         slideMove: 1, // slidemove will be 1 if loop is true
@@ -11,7 +11,7 @@ $(document).ready(function() {
         cssEasing: 'ease', //'cubic-bezier(0.25, 0, 0.25, 1)',//
         easing: 'linear', //'for jquery animation',////
 
-        speed: 400, //ms'
+        speed: 500, //ms'
         auto: true,
         pauseOnHover: false,
         loop: true,

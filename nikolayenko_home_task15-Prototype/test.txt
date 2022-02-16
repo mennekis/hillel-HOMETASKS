@@ -1,0 +1,34 @@
+1. Що виведеться на консоль
+function calc() {
+    let price = 1800 * 0.95;
+}
+console.log(calc());
+
+2. let product = {
+    name: 'Product 1',
+    price: 25
+}
+let product2 = product;
+product2.name = 'Product 2';
+product2.price = 36;
+console.log(product.price);
+
+3.
+'use strict'
+console.log(array);
+let array = [1, 2, 3];
+
+4. 
+let check = '';
+if (check) {
+    console.log(1);
+} else {
+    console.log(2);
+}
+
+5. for(let i=0; i>=0; i++) {
+    console.log(i);
+}
+
+6. 
+"BC0568IO" - регулярка для номер авто
