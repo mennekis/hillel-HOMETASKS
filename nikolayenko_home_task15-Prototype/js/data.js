@@ -1,14 +1,17 @@
 let listPeople = [];
 
-let listCar = [
-    new Car(1, 'BMW', 15000),
-    new Car(2, 'VW', 10000)
-];
+let listCar = [];
 
-const savedListPeople = localStorage.getItem('people');
+const savedListPeople = localStorage.getItem("people");
 if (savedListPeople) {
-    listPeople = JSON.parse(savedListPeople).map((people) => Object.assign(new People(), people));
-    // властивість car має бути обєктом Car
-    console.log(listPeople);
+  listPeople = JSON.parse(savedListPeople).map((people) =>
+    Object.assign(new People(), people)
+  );
+  console.log(listPeople);
 }
-const savedListCar = localStorage.getItem('car');
+const savedListCar = localStorage.getItem("car");
+if (savedListCar) {
+  listCar = JSON.parse(savedListCar).map((car) =>
+    Object.assign(new Car(), car)
+  );
+}
