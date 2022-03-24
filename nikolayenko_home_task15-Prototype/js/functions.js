@@ -8,7 +8,6 @@ function displayListPeople() {
   let wrapPeople = document.querySelector(".people");
 
   wrapPeople.addEventListener("click", (event) => {
-    
     const editButtons = document.querySelectorAll(".btn-edit");
     const deleteButtons = document.querySelectorAll(".btn-delete");
     for (const button of editButtons) {
@@ -16,11 +15,9 @@ function displayListPeople() {
         const id = +event.target.parentNode.dataset.id;
         console.log(`People ID: ${id}`);
         console.log(JSON.parse(localStorage.getItem("people")));
-
         const people = JSON.parse(localStorage.getItem("people")).find(
           (person) => person.id === id
         );
-
         const form = document.querySelector(".form-edit-people");
         if (form) {
           form.remove();
@@ -41,21 +38,14 @@ function displayListPeople() {
         const target = event.target;
         const confirmation = confirm("Вы действительно хотите удалить?");
         const id = +target.closest("li").getAttribute("data-id");
-        target.closest("li").remove();
-
         const people = listPeople.find((people) => people.id === id);
         const indexOf = listPeople.findIndex((people) => people.id === id);
         if (people && confirmation) {
           listPeople.splice(indexOf, 1);
-          // console.log(this.parentNode);
           target.closest("li").remove();
           updateStorage();
-          //     this.innerHTML = "";
-          // wrapPeople?.removeEventListener("click", listener, false);
         } else {
-          console.log(this);
           console.log("Передумал");
-          // displayListPeople();
         }
         console.log("Удаляем");
       });
@@ -106,16 +96,13 @@ function displayListCar() {
         const target = event.target;
         const confirmation = confirm("Вы действительно хотите удалить?");
         const id = +target.closest("li").getAttribute("data-id");
-        target.closest("li").remove();
-
         const people = listCar.find((car) => car.id === id);
         const indexOf = listCar.findIndex((car) => car.id === id);
-        if (car && (confirmation===true)) {
+        if (car && confirmation === true) {
           listCar.splice(indexOf, 1);
           target.closest("li").remove();
           updateStorage();
         } else {
-          console.log(this);
           console.log("Передумал");
         }
         console.log("Удаляем");
@@ -349,7 +336,6 @@ function updateStorage() {
   localStorage.setItem("people", JSON.stringify(listPeople)),
     localStorage.setItem("car", JSON.stringify(listCar));
 }
-
 
 // 1. Редагування людей
 // 2. Видалення з підтвердженням
