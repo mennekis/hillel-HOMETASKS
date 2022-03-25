@@ -7,7 +7,7 @@ function displayListPeople() {
 
   let wrapPeople = document.querySelector(".people");
 
-  wrapPeople.addEventListener("click", (event) => {
+  
     const editButtons = document.querySelectorAll(".btn-edit");
     const deleteButtons = document.querySelectorAll(".btn-delete");
     for (const button of editButtons) {
@@ -50,7 +50,6 @@ function displayListPeople() {
         console.log("Удаляем");
       });
     }
-  });
   toggleFormAddPeople();
 }
 
@@ -63,7 +62,6 @@ function displayListCar() {
 
   let wrapCar = document.querySelector(".car");
 
-  wrapCar.addEventListener("click", (event) => {
     const editButtons = document.querySelectorAll(".btn-edit");
     const deleteButtons = document.querySelectorAll(".btn-delete");
     for (const button of editButtons) {
@@ -108,7 +106,7 @@ function displayListCar() {
         console.log("Удаляем");
       });
     }
-  });
+
   toggleFormAddCar();
 }
 
