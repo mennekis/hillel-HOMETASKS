@@ -1,0 +1,33 @@
+.wrapper {
+  border-radius: 10px;
+  border: 1px solid #222;
+  padding: 35px;
+  background-color: rgba(0, 0, 139, 0.137);
+}
+#weather {
+  display: flex;
+  width: 80%;
+  align-self: center;
+  margin-left: auto;
+  margin-right: auto;
+  flex-direction: column;
+}
+.top-data {
+  width: 100%;
+  display: flex;
+}
+.city-data {
+  width: 50%;
+}
+.city__weather-icon img {
+  height: 150px;
+  width: 150px;
+  align-self: center;
+  justify-content: center;
+}
+body {
+  font-size: 22px;
+}
+h1 {
+  font-size: 80px;
+}
