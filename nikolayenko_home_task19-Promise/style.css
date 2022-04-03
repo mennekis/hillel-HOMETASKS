@@ -1,0 +1,18 @@
+.post {
+  margin-top: 50px;
+  background-color: khaki;
+  border-radius: 15px;
+  padding: 10px 35px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+.post__title {
+  text-decoration: underline;
+}
+p {
+  margin-left: 15%;
+}
+b p {
+  text-decoration: underline;
+}
