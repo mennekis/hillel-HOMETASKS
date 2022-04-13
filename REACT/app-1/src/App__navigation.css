@@ -1,0 +1,13 @@
+.App__navigation {
+  width: fit-content;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.App__navigation ul {
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+  height: 250px;
+  justify-content: space-around;
+}

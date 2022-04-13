@@ -24,22 +24,31 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  align-items: left;
   background-color: aquamarine;
-  min-height: 250px;
+  min-height: 125px;
+  width: 15%;
 }
-.App__navigation--left ul {
-  display: flex;
-  flex-direction: column;
-  width: 150px;
-  height: 250px;
-  justify-content: space-around;
-}
+
 .App__content {
   width: 650px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+}
+
+.App__navigation ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.App__navigation ul li {
+  border-radius: 10px;
+  border: solid 1px blue;
+}
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 @keyframes App-logo-spin {
