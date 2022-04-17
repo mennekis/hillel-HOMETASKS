@@ -1,0 +1,19 @@
+.item-list {
+  border: 1px solid;
+  padding: 5px 10px;
+  margin-left: 15px;
+  margin-bottom: 7px;
+  background-color: rgb(212, 49, 191);
+  border-radius: 10px;
+  width: 65%;
+  cursor: pointer;
+}
+.item-list.item-done {
+  background-color: rgb(132, 213, 139);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 1), -23px 0 20px -23px rgba(0, 0, 0, 0.8),
+    23px 0 20px -23px rgba(0, 0, 0, 0.8), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.form {
+  margin-left: 15px;
+}
