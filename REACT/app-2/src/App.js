@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
+import Form from "./components/Form";
+import List from "./components/List";
 
 export default class App extends Component {
   constructor() {
@@ -22,29 +24,20 @@ export default class App extends Component {
           isDone: false,
         },
       ],
-      newTitle: "",
     };
   }
-  changeHandler = (e) => {
-    this.setState({
-      newTitle: e.target.value,
-    });
-  };
-  clickHandler = (e) => {
-    this.addTodo(this.state.newTitle);
-  };
-  addTodo(title) {
+
+  addTodo = (title) => {
     if (title) {
       this.setState({
         todos: [
           ...this.state.todos,
           { id: new Date().getTime(), title, isDone: false },
         ],
-        newTitle: "",
       });
     }
-  }
-  ChangeStatus(id) {
+  };
+  changeStatus = (id) => {
     const changedList = this.state.todos.map((item) => {
       return item.id === id
         ? {
@@ -56,30 +49,16 @@ export default class App extends Component {
     this.setState({
       todos: changedList,
     });
-  }
+  };
   render() {
     return (
       <div>
         <div className="list">
-          {this.state.todos.map((item) => {
-            return (
-              <div
-                className={`item-list ${item.isDone ? "item-done" : ""}`}
-                key={item.id}
-                onClick={() => this.ChangeStatus(item.id)}
-              >
-                {item.title}
-              </div>
-            );
-          })}
+          <List todos={this.state.todos} changeStatus={this.changeStatus} />
         </div>
-        <div className="form">
-          <input
-            type="text"
-            value={this.state.newTitle}
-            onChange={this.changeHandler}
-          />
-          <button onClick={this.clickHandler}>Add Todo</button>
+
+        <div>
+          <Form addTodo={this.addTodo} />
         </div>
       </div>
     );
