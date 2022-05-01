@@ -4,7 +4,7 @@ export default class Button extends Component {
  
   render() {
     return (
-      <button  onClick={()=>{console.log(this.props.title)}}>{this.props.title}</button>
+      <button type={this.props.type} onClick={()=>{console.log(this.props.title,this.props.type)}}>{this.props.title}</button>
     )
   }
 }
